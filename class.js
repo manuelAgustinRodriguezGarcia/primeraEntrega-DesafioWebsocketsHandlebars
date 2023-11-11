@@ -3,24 +3,33 @@ class ProductManager {
   constructor() {
   }
   addProduct(title,description,price,thumbnail,code,stock) {
-    let id = 0;
-    for (let i = 0; i < this.productos.length; i++) {
-      const element = this.productos[i];
-      if(element.id > id) {
-        id = element.id;
+    if(title != "" && description!= "" && price != null && thumbnail!= "" && stock != null){
+      let id = 0;
+      for (let i = 0; i < this.productos.length; i++) {
+        const element = this.productos[i];
+        if(element.id > id) {
+          id = element.id;
+        }
+      }
+      id++;
+      code= code
+      const codeAlready = this.productos.some((x) => (x.code == code)) 
+      if (codeAlready){
+        console.error("Ya existe un producto con este código!")
+        return
+      }
+      title= title;
+      description= description;
+      price= price || 200;
+      thumbnail= thumbnail;
+      stock= stock;
+      this.productos.push({id:id, title, description, price, thumbnail, code, stock})
+      console.log(`Agregado con exito, con el codigo: ${code}`)
+      }
+      else {
+        console.log("Ingrese datos validos!")
       }
     }
-    id++;
-    title= title || `Producto ${id}`;
-    description= description || `Sin descripción agregada`;
-    price= price || 200;
-    thumbnail= thumbnail || "imagen-generica.png" ;
-    const codeAlready = this.productos.some((x) => (x.code == code)) 
-    const codigoGenerico = "ERROR: Este codigo ya se encuentra en la lista de productos"
-    code= codeAlready ? codigoGenerico : code || 1000 + id
-    stock= stock || 135;
-    this.productos.push({id:id, title, description, price, thumbnail, code, stock})
-  }
   getProducts() {
     console.log(this.productos)
   }
@@ -30,9 +39,7 @@ class ProductManager {
   }
 }
 
-const producto1 = new ProductManager()
-producto1.addProduct(`crema`, undefined, 3200, undefined, 30256, 4)
-producto1.addProduct(`coca cola`, "bebida coca cola", undefined, "image-coca.jpg", 30256, 256)
-producto1.addProduct(undefined, undefined, 200, "image-hielo.jpg", undefined, 3)
+const firstManager = new ProductManager()
+firstManager.addProduct(`crema`, "asd", 3200, "asd", 30256, 4)
 
-producto1.getProducts()
+firstManager.getProducts()

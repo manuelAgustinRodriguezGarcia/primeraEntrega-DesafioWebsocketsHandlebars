@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Coca-cola",
+    "description": "Bebida",
+    "price": 500,
+    "thumbnail": "foto-coca.png",
+    "code": 100,
+    "stock": 50,
+    "path": "./productos.json"
+  },
+  {
+    "id": 2,
+    "title": "Harina",
+    "description": "Derivado del trigo",
+    "price": 200,
+    "thumbnail": "foto-harina.png",
+    "code": 101,
+    "stock": 50,
+    "path": "./productos.json"
+  },
+  {
+    "id": 3,
+    "title": "Papas",
+    "description": "Hortaliza",
+    "price": 300,
+    "thumbnail": "foto-papas.png",
+    "code": 110,
+    "stock": 50,
+    "path": "./productos.json"
+  },
+  {
+    "id": 4,
+    "title": "Huevos",
+    "description": "Producto de granja",
+    "price": 2100,
+    "thumbnail": "foto-huevos.png",
+    "code": 111,
+    "stock": 50,
+    "path": "./productos.json"
+  },
+  {
+    "id": 5,
+    "title": "Aceite",
+    "description": "Derivado del girasol",
+    "price": 1500,
+    "thumbnail": "foto-aceite.png",
+    "code": 1000,
+    "stock": 50,
+    "path": "./productos.json"
+  },
+  {
+    "id": 6,
+    "title": "Acelga",
+    "description": "Verdura",
+    "price": 350,
+    "thumbnail": "foto-acelga.png",
+    "code": 1001,
+    "stock": 50,
+    "path": "./productos.json"
+  }
+]
