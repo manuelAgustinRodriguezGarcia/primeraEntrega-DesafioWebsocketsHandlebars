@@ -36,7 +36,7 @@ class ProductManager {
     const productosArchivadosString = await fs.promises.readFile('productos.json', 'utf-8');
     const productosArchivadosArray = JSON.parse(productosArchivadosString);
     const productoEncontrado = productosArchivadosArray.find((x) => (x.id == id));
-    console.log(productoEncontrado ?? "Not Found");
+    return productoEncontrado;
   }
   async deleteProduct(id) {
     const productosArchivadosString = await fs.promises.readFile('productos.json', 'utf-8');
@@ -86,13 +86,5 @@ class ProductManager {
   }
 }
 
-async function PruebaAsincronica() {
-  const firstManager = new ProductManager();
-  await firstManager.addProduct("Coca-cola","Bebida",500,"foto-coca.png", 100, 50);
-  await firstManager.addProduct("Harina","Derivado del trigo",200,"foto-harina.png", 101, 50);
-  await firstManager.addProduct("Papas","Hortaliza",300,"foto-papas.png", 110, 50);
-  await firstManager.addProduct("Huevos","Producto de granja",2100,"foto-huevos.png", 111, 50);
-  await firstManager.addProduct("Aceite","Derivado del girasol",1500,"foto-aceite.png", 1000, 50);
-  await firstManager.addProduct("Acelga","Verdura",350,"foto-acelga.png", 1001, 50)
-}
-PruebaAsincronica();
+
+module.exports = ProductManager;
