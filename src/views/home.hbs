@@ -1,0 +1,20 @@
+<section>
+  <h1 class="titleView">Hola, bienvenido a la vista de PRODUCTOS!</h1>
+  <div class="allProductsViews">
+  {{#each products}}
+      <div class="productItem">
+        <img src="" alt= {{this.thumbnail}}>
+        <h3>{{this.title}}</h3>
+        <p>ID: {{this.id}}</p>
+        <p>Producto {{this.category}}</p>
+        <p>{{this.description}}</p>
+        <p>$ {{this.price}}</p>
+        <p>Código: {{this.code}}</p>
+        <p>Stock: {{this.stock}} unid.</p>
+        <p>Status: {{this.status}}</p>
+      </div>
+  {{/each}}
+  </div>
+</section>
+
+<script src="/socket.io/socket.io.js"></script>

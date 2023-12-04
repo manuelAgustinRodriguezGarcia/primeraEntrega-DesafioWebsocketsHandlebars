@@ -62,7 +62,7 @@ class ProductManager {
       return;
     }
     const nuevosProductos = productosArchivadosArray.filter(x => x.id != id);
-    if(newTitle != "" && newDescription!= "" && newPrice != null && newThumbnail!= "" && newStock != null){
+    if(newTitle != " " && newDescription!= " " && newPrice != 0 && newThumbnail!= " " && newStock != 0){
       const updateStatus = typeof newStatus === 'boolean' ? newStatus : true;
       const productoActualizado = {
         id:id, 
@@ -92,6 +92,5 @@ class ProductManager {
     await fs.promises.writeFile('productos.json', nuevosProductosString);
   }
 }
-
 
 module.exports = ProductManager;

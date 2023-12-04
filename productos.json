@@ -12,18 +12,6 @@
     "path": "./productos.json"
   },
   {
-    "id": 2,
-    "title": "Harina",
-    "category": "organico",
-    "description": "Derivado del trigo",
-    "price": 200,
-    "thumbnail": "foto-harina.png",
-    "code": "har",
-    "stock": 50,
-    "status": true,
-    "path": "./productos.json"
-  },
-  {
     "id": 3,
     "title": "Papas",
     "category": "organico",
@@ -60,14 +48,47 @@
     "path": "./productos.json"
   },
   {
-    "id": 6,
-    "title": "Choclo",
+    "id": 7,
+    "title": "Yerba Suave",
     "category": "organico",
-    "description": "Verdura",
-    "price": 2100,
+    "description": "Yerba para mate",
+    "price": 3000,
+    "thumbnail": "foto-yerba.png",
+    "code": "yerb",
+    "stock": 50,
+    "status": true
+  },
+  {
+    "id": 6,
+    "title": "Choclo Cremoso",
+    "category": "organico",
+    "description": "Verdura amarilla",
+    "price": 200,
     "thumbnail": "foto-choclo.png",
-    "code": "cho",
-    "stock": 777,
+    "code": "ccl",
+    "stock": 65445,
+    "status": true
+  },
+  {
+    "id": 2,
+    "title": "Harina de trigo 000",
+    "category": "organico",
+    "description": "Derivado del trigo tipo 000",
+    "price": 550,
+    "thumbnail": "foto-harina.png",
+    "code": "har",
+    "stock": 500,
+    "status": true
+  },
+  {
+    "id": 8,
+    "title": "Pepsi",
+    "category": "ultraprocesado",
+    "description": "Bebida similar a la coca",
+    "price": 320,
+    "thumbnail": "foto-pepsi.png",
+    "code": "ppsi",
+    "stock": 9000,
     "status": true
   }
 ]

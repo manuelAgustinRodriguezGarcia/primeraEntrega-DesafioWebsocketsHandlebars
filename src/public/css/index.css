@@ -1,0 +1,177 @@
+* {
+  font-family: sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.allProductsViews {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 50px;
+}
+
+.titleView {
+  font-size: 30px;
+  text-align: center;
+  background-color: #252525;
+  color: #fff;
+  padding: 25px;
+}
+
+.titulo {
+  background: #252525;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.buscarProducto {
+  background-color: #252525;
+  padding: 30px 0px 30px 50px;
+}
+
+.buscarProducto input {
+  height: 30px;
+  width: 300px;
+}
+
+.buscarProducto h2 {
+  color: #fff;
+}
+
+button {
+  background-color: rgb(50, 50, 255);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+  height: 30px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.foundProduct {
+  color: #fff;
+}
+.foundProduct h2 {
+  font-size: 30px;
+}
+
+.allProductsRealTime {
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.productItem {
+  display: flex;
+  width: 20%;
+  padding: 10px;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  background-color: #252525;
+  color: #fff;
+}
+
+.agregarProducto {
+  margin: 50px 0px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  background-color: #252525;
+  color: #fff;
+}
+
+.agregarProducto fieldset {
+  border: none;
+  display: flex;
+  padding: 0;
+}
+
+.agregarProducto fieldset input {
+  height: 30px;
+}
+
+.agregarProducto fieldset label {
+  height: 30px;
+  text-align: center;
+}
+
+.agregarProducto input {
+  height: 30px;
+}
+
+.agregarProductoForm {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.actualizarProducto {
+  background-color: #252525;
+  width: 100%;
+  color: #fff;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.actualizarProducto fieldset {
+  border: none;
+  padding: 0;
+  width: 180px;
+}
+
+.actualizarProducto input {
+  height: 30px;
+}
+
+.updateId {
+  width: 20%;
+}
+
+.updateForm {
+  display: flex;
+  gap: 15px;
+}
+
+.updateProduct {
+  background-color: rgb(255, 234, 0);
+  color: #000;
+}
+
+.updateProduct:hover {
+  cursor: pointer;
+}
+
+.borrarProducto {
+  margin-top: 50px;
+  padding: 50px;
+  color: #fff;
+  background-color: #252525;
+}
+
+.borrarProducto input{
+  width: 300px;
+  height: 30px;
+}
+
+.borrarProducto button {
+  background-color: #f00;
+}

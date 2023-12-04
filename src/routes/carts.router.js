@@ -1,5 +1,5 @@
 const { Router } = require('express')
-const CartManager = require('../../CartManager.js')
+const CartManager = require('../../managers/CartManager.js')
 
 const router = Router()
 

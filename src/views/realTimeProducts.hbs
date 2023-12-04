@@ -1,0 +1,58 @@
+<h1 class="titulo">Hola, estas en la seccion de productos en tiempo real</h1>
+<div id="allProductsRealTime" class="allProductsRealTime">
+</div>
+<section>
+  <form class="buscarProducto">
+    <h2>Buscar un producto (ID)</h2>
+    <input type="number" id="getProductId" placeholder="Ingrese el id del producto...">
+    <button type="submit" id="getProductButton">Buscar producto</button>
+    <div class="foundProduct" id="foundProduct"></div>
+  </form>
+
+  <form class="agregarProducto">
+      <h2>Agregar un nuevo producto</h2>
+    <div class="agregarProductoForm">
+      <input id="productName" type="text" placeholder="Nombre">
+      <input id="productCategory" type="text" placeholder="Categoria">
+      <input id="productDescription" type="text" placeholder="Descripcion">
+      <input id="productPrice" type="number" placeholder="Precio">
+      <input id="productThumbnail" type="text" placeholder="Imagen">
+      <input id="productCode" type="text" placeholder="Codigo">
+      <input id="productStock" type="number" placeholder="Stock">
+      <fieldset id="productStatus">
+        <label for="statusTrue"><input type="radio" name="status" value= true id="statusTrue" checked>TRUE</label>
+        <label for="statusFalse"><input type="radio" name="status" value= false id="statusFalse">FALSE</label>
+      </fieldset>
+    </div>
+    <div>
+      <button type="submit" id="addProduct">Agregar producto</button>
+    </div>
+  </form>
+  <form class="actualizarProducto">
+    <h2>Actualizar producto (ID)</h2>
+    <input type="number" id="updatedProductId" class="updateId" placeholder="Ingrese el ID del producto">
+    <div class="updateForm">
+      <input id="updatedProductName" type="text" placeholder="Nuevo nombre">
+      <input id="updatedProductCategory" type="text" placeholder="Nueva categoria">
+      <input id="updatedProductDescription" type="text" placeholder="Nueva descripcion">
+      <input id="updatedProductPrice" type="number" placeholder="Nuevo precio">
+      <input id="updatedProductThumbnail" type="text" placeholder="Nueva imagen">
+      <input id="updatedProductCode" type="text" placeholder="Nuevo codigo">
+      <input id="updatedProductStock" type="number" placeholder="Nuevo stock">
+      <fieldset id="updatedProductStatus">
+        <label for="updatedStatusTrue"><input type="radio" name="updatedStatus" value= true id="updatedStatusTrue" checked>TRUE</label>
+        <label for="updatedStatusFalse"><input type="radio" name="updatedStatus" value= false id="updatedStatusFalse">FALSE</label>
+      </fieldset>
+    </div>
+    <button type="submit" id="updateProduct" class="updateProduct">Actualizar producto</button>
+    <div class="updatedProduct" id="updatedProduct"></div>
+  </form>
+  <form class="borrarProducto">
+    <h2>Eliminar un producto (ID)</h2>
+    <input type="text" id="deleteProductId" placeholder="Ingrese el ID del producto...">
+    <button type="submit" id="deleteProduct">Eliminar producto</button>
+    <div id="deletedProduct"></div>
+  </form>
+</section>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/realTimeProducts.js"></script>

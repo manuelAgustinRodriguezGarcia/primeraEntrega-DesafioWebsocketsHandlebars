@@ -1,5 +1,5 @@
 const { Router } = require('express')
-const ProductManager = require('../../ProductManager.js')
+const ProductManager = require('../../managers/ProductManager.js');
 
 const router = Router()
 
@@ -9,16 +9,18 @@ async function inicializarProductos() {
   firstManager.productos = productos;
 }
 
-inicializarProductos()
+inicializarProductos();
 
 router.get('/', async (req, res) => {
   const products = await firstManager.getProducts();
   const limit = parseInt(req.query.limit);
   if(isNaN(limit)) {
-    res.json(products);
+    res.json(products)
   }else {
     const productsLimit = products.slice(0, limit);
-    res.status(200).json(productsLimit)
+    res.status(200).render('home.hbs', {
+      products: productsLimit
+    })
   }
 })
 
